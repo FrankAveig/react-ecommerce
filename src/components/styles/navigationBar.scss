@@ -1,0 +1,31 @@
+.navigation{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.logoNavbar{
+    width: 60px;
+    margin-left: 15px; 
+    display: flex;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    ul{
+        display: flex;
+        li{
+            list-style: none;
+            margin: auto 20px;
+            color: #666666;            
+        }
+        li:hover{
+            cursor:pointer;
+            color: #303030;            
+
+        }
+    }
+}
+ 
