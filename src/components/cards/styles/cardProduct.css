@@ -1,0 +1,44 @@
+.cardProduct {
+  background-color: rgba(255, 255, 255, 0.741);
+  padding-bottom: 20px;
+  margin: 20px auto;
+  border-radius: 15px;
+}
+.cardProduct img {
+  width: 200px;
+}
+.cardProduct hr {
+  opacity: 0.2;
+}
+.cardProduct .description {
+  margin-left: 25px;
+}
+.cardProduct .description h3 {
+  margin-bottom: 5px;
+  color: #434343;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+}
+.cardProduct .description h4 {
+  margin: 0;
+  font-size: 20px;
+  color: #666666;
+  font-weight: 500;
+}
+.cardProduct .description .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.cardProduct .description svg {
+  margin-right: 5px;
+  cursor: pointer;
+  display: none;
+  margin-top: 10px;
+  color: rgba(102, 102, 102, 0.3882352941);
+}
+
+.cardProduct:hover .icons svg {
+  display: block;
+}

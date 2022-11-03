@@ -1,11 +1,11 @@
 import React from 'react'
 import images from '../assets/images/images.js'
 import './styles/navigationBar.css'
-const NavigationBar = () => {
+const NavigationBar = (props) => {
   return (
     <>
-        <section className="navigation">
-            <img className='logoNavbar' src={images.logo} alt="logo"  />
+        <section className={props.class?'navigation':'footer-navigation'}>
+            {props.img?<img className='logoNavbar' src={images.logo} alt="logo"  />:null}
             <nav>
                 <ul>
                     <li>Home</li>
@@ -14,11 +14,11 @@ const NavigationBar = () => {
                     <li>Contact</li>
                 </ul>
             </nav>
-            <nav>
+            {props.login?<nav>
                 <ul>
                     <li>Login</li>
                 </ul>
-            </nav>
+            </nav>:null}
         </section>
     
     

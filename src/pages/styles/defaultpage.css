@@ -15,3 +15,99 @@
 h1 {
   margin: 20px;
 }
+
+.hero {
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.hero .text-hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.hero .text-hero h2 {
+  font-size: 55px;
+  color: #575757;
+  margin: 0;
+}
+.hero .text-hero h3 {
+  font-size: 40px;
+  color: #666666;
+  margin: 0;
+}
+.hero .text-hero p {
+  font-size: 20px;
+  color: #737373;
+}
+.hero img {
+  width: 500px;
+}
+
+.products {
+  width: 100%;
+  position: relative;
+  margin: 40px 0 40px 0;
+}
+.products .text-newProducts {
+  width: 90%;
+  margin: auto;
+  padding-top: 40px;
+}
+.products .text-newProducts h2 {
+  margin: 0;
+  text-transform: uppercase;
+  color: #434343;
+}
+.products .text-newProducts p {
+  margin-top: 0;
+  color: #434343;
+}
+.products .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+.products::before {
+  background: #f6f6f6 none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  -webkit-transform: skewY(-1.7deg);
+          transform: skewY(-1.7deg);
+  width: 100%;
+  z-index: -1;
+}
+
+.engage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+.engage .information {
+  text-align: justify;
+}
