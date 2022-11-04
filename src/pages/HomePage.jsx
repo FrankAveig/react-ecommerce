@@ -34,7 +34,7 @@ const getProducts = async()=>{
           <div className="container">
             {
               products.map((product,index)=>{
-                if(index === 4){
+                if(index === 3){
                   return null
                 }
                 return(

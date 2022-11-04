@@ -17,6 +17,7 @@ const NavigationBar = (props) => {
             {props.login?<nav>
                 <ul>
                     <li>Login</li>
+                    <li>Sign in</li>
                 </ul>
             </nav>:null}
         </section>

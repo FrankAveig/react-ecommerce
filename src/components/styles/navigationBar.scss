@@ -19,7 +19,10 @@ nav{
         li{
             list-style: none;
             margin: auto 20px;
-            color: #666666;            
+            color: #666666; 
+        }
+        #root > section > nav:nth-child(3) > ul > li:nth-child(2){
+            width: 50px;
         }
         li:hover{
             cursor:pointer;

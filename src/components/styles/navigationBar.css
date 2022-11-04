@@ -36,6 +36,9 @@ nav ul li {
   margin: auto 20px;
   color: #666666;
 }
+nav ul #root > section > nav:nth-child(3) > ul > li:nth-child(2) {
+  width: 50px;
+}
 nav ul li:hover {
   cursor: pointer;
   color: #303030;

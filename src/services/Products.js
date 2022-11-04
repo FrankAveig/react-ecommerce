@@ -1,6 +1,5 @@
 import axios from 'axios'
 const path= `https://api-ecommercee.vercel.app/v1/product`
-console.log(path)
 
 export const verProductos = async ()=>{
 
