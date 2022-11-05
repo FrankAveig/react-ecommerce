@@ -11,3 +11,12 @@ export const verProductos = async ()=>{
   }
 }
 
+export const verProducto = async(id)=>{
+  try{
+    const {data:{detalles}} = await axios.post(`${path}/verProducto`,id)
+    console.log(detalles,'get')
+    return detalles;
+  }catch(e){
+    console.log(e.response.console.log(e.response.data.detalles) )
+  }
+}

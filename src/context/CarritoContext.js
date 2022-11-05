@@ -27,10 +27,13 @@ const CarritoProvider = ({children}) => {
             setItems(pasados)
           }
         },[])
+
         const deleteItem = (index)=>{
-         /*  const newItem =[...items];
+          const newItem =[...items];
           newItem.splice(index,1);
-          setItems(newItem); */
+          setItems(newItem); 
+          console.log(items)
+          index===0?localStorage.removeItem('items'):localStorage.setItem('items',JSON.stringify(items));
         }
 
         const cleanItems = () => setCarrito([]);

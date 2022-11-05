@@ -43,7 +43,7 @@ const getProducts = async()=>{
                   return null
                 }
                 return(
-                  <CardProduct key={index} img={product.img} name={product.name} price={product.price}/>
+                  <CardProduct key={index} img={product.img} name={product.name} id={product._id} price={product.price}/>
                 )
               })
             }

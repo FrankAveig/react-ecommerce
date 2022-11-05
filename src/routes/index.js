@@ -10,6 +10,7 @@ import ProductsPage from '../pages/ProductsPage';
 import ProfilePage from '../pages/ProfilePage'
 import ContactPage from '../pages/ContactPage';
 import CheckoutPage from '../pages/CheckoutPage';
+import ProductoPage from '../pages/ProductoPage';
 const RouterComponent = () => {
   const {user: {token,type}} = useContext(UserContext)
   
@@ -28,6 +29,7 @@ const RouterComponent = () => {
       <Route path='/login' element = {<LoginPage/>}/>
       <Route path='/signin' element = {<SingInPage/>} /> 
       <Route path='/logout' element = {<Logout/>} />
+      <Route path='/product' element = {<ProductoPage/>} />
       {token&&<Route path='/profile' element = {<ProfilePage/>} />}
       <Route path='/about' element = {<AboutPage/>} /> 
       <Route path='/products' element = {<ProductsPage/>} /> 
