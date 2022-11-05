@@ -6,20 +6,21 @@ import { UserContext } from '../context/UserContext'
 const LoginPage = () => {
   const {guardarToken} = useContext(UserContext)
   const [errorMessage,setErrorMessage]=useState(null)
+
   const onSubmited= async (e)=>{
     e.preventDefault()
     const formData = new FormData(e.target)
     const data =Object.fromEntries(formData)
-    const {detalles: token,error  } = await login(data)
-    console.log(token)
-    if(error){
-      setErrorMessage(error)
+    const resp = await login(data)
+    console.log(resp.detalles.token)
+    if(resp.error){
+      setErrorMessage(resp.error)
     }else{
       setErrorMessage(null)
-      guardarToken(token)
+      guardarToken(resp.detalles.token,resp.detalles.type)
       e.target.reset()
-    }
-    console.log(errorMessage)
+    } 
+
   }
 
 

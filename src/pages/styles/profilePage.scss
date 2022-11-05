@@ -1,0 +1,22 @@
+
+.profile{
+  text-align: center;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .card-profile{
+    img{
+      width: 200px;
+      border-radius: 100px;
+    }
+    margin: 50px;
+    background-color: #fafafa;
+    padding: 30px;
+    border-radius: 20px;
+    .datosProfile{
+      text-align: center;
+    }
+  }
+}

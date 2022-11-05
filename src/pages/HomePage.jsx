@@ -1,9 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import images from '../assets/images/images'
 import CardProduct from '../components/cards/CardProduct'
 import './styles/defaultpage.css'
 import { verProductos } from '../services/Products'
+
 const HomePage = () => {
+
+
+
+
 const [products , setProducts] =useState([])
 const getProducts = async()=>{
   const {detalles} = await verProductos();

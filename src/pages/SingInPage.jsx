@@ -1,9 +1,27 @@
-import React from 'react'
+import {React,useState, useContext} from 'react'
 import './styles/LoginPage.css'
 import images from '../assets/images/images'
+import { UserContext } from '../context/UserContext'
+import { singIn } from '../services/User'
 
 
 const SingInPage = () => {
+  const {guardarToken} = useContext(UserContext);
+  const [errorMessage,setErrorMessage] = useState(null)
+  const onSingIn =async (e)=>{
+    e.preventDefault()
+    const formData = new FormData (e.target)
+    const data = Object.fromEntries(formData)
+    const resp = await singIn(data)
+    console.log(resp)
+    if(resp.error){
+      setErrorMessage(resp.error)
+      console.log(resp.error)
+    }else{
+      setErrorMessage(null)
+      guardarToken(resp.detalles.token,resp.detalles.type)
+    }
+  }
   return (
         <>
       <main>
@@ -11,20 +29,22 @@ const SingInPage = () => {
           <img src={images.imgLogin} alt="" />
         </section>
         <section className='form'>
-          <form action="">
+          <form onSubmit={onSingIn}>
             <h2>SING IN</h2>
             <label htmlFor="">Name</label>
-            <input type="text" placeholder='Enter your name' />
+            <input required type="text" placeholder='Enter your name' name='name' />
             <label htmlFor="">Surname</label>
-            <input type="text" placeholder='Enter your surname' />
+            <input required type="text" placeholder='Enter your surname' name='surname' />
             <label htmlFor="">City</label>
-            <input type="text" placeholder='Enter your city' />
+            <input required type="text" placeholder='Enter your city' name='city' />
             <label htmlFor="">Age</label>
-            <input type="number" placeholder='Enter your age' />
+            <input required type="number" placeholder='Enter your age' name= 'age' />
             <label htmlFor="">E-mail</label>
-            <input type="email" placeholder='Enter your E-mail'/>
+            <input required type="email" placeholder='Enter your E-mail' name='mail'/>
+            {errorMessage?<label className='error'>'This e-mail is aready used'</label>:<label></label>}
+
             <label htmlFor="">Password</label>
-            <input type="password"  placeholder='Enter your password'/>
+            <input required type="password"  placeholder='Enter your password' name ='password'/>
             <button type='summit'>Login</button>
             <p>Don't have an account?  <a href="">Sign up</a></p>
           </form>

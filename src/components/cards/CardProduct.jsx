@@ -1,12 +1,21 @@
-import React from 'react'
+import {React,useContext }from 'react'
 import images from '../../assets/images/images'
 import './styles/cardProduct.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus,faCircleInfo  } from '@fortawesome/free-solid-svg-icons'
-const hola =()=>{
-  alert('hola')
-}
+import { CarritoContext } from '../../context/CarritoContext'
+
+
 const CardProduct = (props) => {
+  const {saveItem} = useContext(CarritoContext)
+  const {items} = useContext(CarritoContext)
+  
+  function guardar(product){
+    saveItem(product)
+  }
+
+
+
   return (
     <>
       <div className='cardProduct'>
@@ -18,7 +27,7 @@ const CardProduct = (props) => {
           <h4>${props.price}</h4>
           </div>
           <div className="icons">
-          <FontAwesomeIcon icon={faCartPlus} onClick={hola}/>
+          <FontAwesomeIcon icon={faCartPlus} onClick={(e)=>guardar(props)}/>
           <FontAwesomeIcon icon={faCircleInfo} />
           </div>
         </div>
