@@ -1,0 +1,30 @@
+h1 {
+  margin: 50px;
+  text-align: center;
+}
+
+.infoProduct {
+  width: 90%;
+  margin: auto;
+}
+.infoProduct .container {
+  margin: 100px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.infoProduct .container .container_img img {
+  width: 240px;
+  height: 405px;
+}
+.infoProduct .container .container_description {
+  width: 70%;
+  text-align: justify;
+  margin: auto 50px;
+}
+.infoProduct .container .container_description h1 {
+  margin: 0;
+}

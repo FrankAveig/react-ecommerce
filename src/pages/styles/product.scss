@@ -1,0 +1,27 @@
+h1{
+  margin: 50px;
+  text-align: center;
+}
+.infoProduct{
+  width: 90%;
+  margin: auto;
+  .container{
+    margin: 100px auto;
+    display: flex;
+    justify-content: center;
+    .container_img{
+      img{
+        width: 240px;
+        height: 405px;
+      }
+    }
+    .container_description{
+      width: 70%;
+      text-align: justify;
+      margin: auto 50px;
+      h1{
+        margin: 0;
+      }
+    }
+  }
+}

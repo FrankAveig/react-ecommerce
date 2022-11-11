@@ -15,21 +15,16 @@ const RouterComponent = () => {
   const {user: {token,type}} = useContext(UserContext)
   
 
-  const customerRoutes=[
-    {path:'/', element : <HomePage/>},
-    {path:'/login', element : <LoginPage/>},
-    {path:'/singin', element : <SingInPage/>}
-  ]
 
 
   return (
     
     <Routes>
       <Route path='/' element = {<HomePage/>} /> 
-      <Route path='/login' element = {<LoginPage/>}/>
-      <Route path='/signin' element = {<SingInPage/>} /> 
-      <Route path='/logout' element = {<Logout/>} />
-      <Route path='/product' element = {<ProductoPage/>} />
+      {!token&&<Route path='/login' element = {<LoginPage/>}/>}
+      {!token&&<Route path='/signin' element = {<SingInPage/>} />} 
+      {token&&<Route path='/logout' element = {<Logout/>} />}
+      <Route path='/product/:id' element = {<ProductoPage/>} />
       {token&&<Route path='/profile' element = {<ProfilePage/>} />}
       <Route path='/about' element = {<AboutPage/>} /> 
       <Route path='/products' element = {<ProductsPage/>} /> 

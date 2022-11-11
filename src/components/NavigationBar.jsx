@@ -21,9 +21,10 @@ const NavigationBar = (props) => {
                 <ul>
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/about'>About</Link></li>
+                    <li><Link to='/products'>Products</Link></li>
                     <li><Link to='/contact'>Contact</Link></li>
-                    <li><Link to='/profile'>MyProfile</Link></li>
-                    <li><Link to='/checkout'>Chekout</Link></li>
+                    {token?<li><Link to='/profile'>MyProfile</Link></li>:null}
+                    {token?<li><Link to='/checkout'>Chekout</Link></li>:null}
                 </ul>
             </nav>
             {props.login?<nav>

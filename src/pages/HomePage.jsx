@@ -47,7 +47,6 @@ const getProducts = async()=>{
                 )
               })
             }
-            <CardProduct img={images.cel} name='Producto1' price='$830' />
           </div>
         </section>
         <section className='engage'>

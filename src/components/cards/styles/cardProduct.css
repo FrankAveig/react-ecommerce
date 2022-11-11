@@ -5,8 +5,16 @@
   width: 200px;
   padding: 20px;
 }
-.cardProduct img {
-  width: 200px;
+.cardProduct .img_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.cardProduct .img_container img {
+  width: 150px;
   height: 200px;
   border-radius: 0;
 }
