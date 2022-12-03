@@ -11,6 +11,7 @@ import ProfilePage from '../pages/ProfilePage'
 import ContactPage from '../pages/ContactPage';
 import CheckoutPage from '../pages/CheckoutPage';
 import ProductoPage from '../pages/ProductoPage';
+
 const RouterComponent = () => {
   const {user: {token,type}} = useContext(UserContext)
   

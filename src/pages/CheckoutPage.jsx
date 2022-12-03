@@ -1,4 +1,5 @@
 import {React, useContext} from 'react'
+import PayaPalButton from '../components/PaypalButtons'
 import { CarritoContext } from '../context/CarritoContext'
 import './styles/checkout.css'
 
@@ -35,11 +36,13 @@ const CheckoutPage = () => {
           {items?items.map((item,index)=>{
             return (<tr key={index}><td align="center" valign="middle"><img  src={item.img} alt="" /></td><td>{item.name}</td><td>${item.price}</td><td><button onClick={(e)=>{deleted(index)}} >Elimiar</button></td></tr>) 
           }):<p>No existen items aun</p>}
+
         </tbody>
         <tfoot>
           <tr>
             <td colSpan={2}>Total</td>
             <td>${total}</td>
+            <td><PayaPalButton amount={total} currency='USD'/></td>
           </tr>
         </tfoot>
       </table>

@@ -6,13 +6,19 @@ import reportWebVitals from './reportWebVitals';
 import { UserProvider } from './context/UserContext';
 import { BrowserRouter } from 'react-router-dom';
 import { CarritoProvider } from './context/CarritoContext';
-
+import {PayPalScriptProvider} from "@paypal/react-paypal-js";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <BrowserRouter>
         <UserProvider>
             <CarritoProvider>
+                <PayPalScriptProvider
+                options={{
+                    "client-id": "AVS8yofq2RTVG1vXN-ryP9ApuDXLXLLIpdv2pdGVZPmwLfg8Oj3CPfSpfcEK1NYQhIWUaCbKzLBarQjw"
+                }}
+            >
                     <App />
+			</PayPalScriptProvider>
             </CarritoProvider>
         </UserProvider>
     </BrowserRouter>
