@@ -65,7 +65,6 @@ const compra = async(info)=>{
                           ],
                       })
                       .then((orderId) => {
-                        console.log("orderid",orderId);
                           // Your code here after create the order
                           return orderId;
                       });

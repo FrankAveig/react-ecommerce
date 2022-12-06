@@ -35,7 +35,7 @@ const NavigationBar = (props) => {
                     {token?<li><Link to='/profile'>My Profile</Link></li>:null}
                     {type=='customer'?<li><Link to='/myorders'>My Orders</Link></li>:null}
                     {type=='admin'?<li><Link to='/allorders'>All Orders</Link></li>:null}
-                    {type=='customer'?<li><Link to='/checkout'>Chekout</Link></li>:null}
+                    {token?<li><Link to='/checkout'>Chekout</Link></li>:null}
                 </ul>
             </nav>
             {props.login?<nav className='navigation-2'>

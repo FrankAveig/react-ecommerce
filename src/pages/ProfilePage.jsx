@@ -24,7 +24,6 @@ const Profile = () => {
 
   const update= async(id,url)=>{
     if(url==''){
-      console.log(url)
     }else{
       const newUpdate = {
         "img": url

@@ -20,6 +20,8 @@ const CardProduct = (props) => {
 
   const logeado= (product)=>{
     saveItem(product)
+    console.log(product)
+
     setFlag(true)
     setInterval(()=>{
       setFlag(false)

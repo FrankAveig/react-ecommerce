@@ -38,12 +38,13 @@ const getProducts = async()=>{
           <div className="container">
             {
               products.map((product,index)=>{
-                if(index === 3){
+                if(index >3){
                   return null
-                }
-                return(
-                  <CardProduct key={index} img={product.img} name={product.name} id={product._id} price={product.price}/>
-                )
+                }else{
+                  return(
+                    <CardProduct key={index} img={product.img} name={product.name} id={product._id} price={product.price}/>
+                    )
+                  }
               })
             }
           </div>
@@ -68,7 +69,7 @@ const getProducts = async()=>{
             {
               products.map((product,index)=>{
                 return(
-                  <CardProduct key={index} img={product.img} name={product.name} price={product.price}/>
+                  <CardProduct key={index} img={product.img} name={product.name} id={product._id} price={product.price}/>
                 )
               })
             }

@@ -17,8 +17,8 @@ h1 {
           justify-content: center;
 }
 .infoProduct .container .container_img img {
-  width: 240px;
   height: 405px;
+  width: 282px;
 }
 .infoProduct .container .container_description {
   width: 70%;
@@ -27,4 +27,9 @@ h1 {
 }
 .infoProduct .container .container_description h1 {
   margin: 0;
+}
+.infoProduct .container .container_description svg {
+  display: block;
+  color: rgba(128, 128, 128, 0.514);
+  cursor: pointer;
 }
