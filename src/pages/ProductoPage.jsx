@@ -6,7 +6,7 @@ import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 import { CarritoContext } from '../context/CarritoContext';
 import { UserContext } from '../context/UserContext';
 import Alert from '@mui/material/Alert';
-
+import './styles/product.css'
 const ProductoPage = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);

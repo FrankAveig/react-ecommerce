@@ -2,6 +2,7 @@ import React, { useState, useReducer } from 'react'
 import { useEffect } from 'react'
 import ModalProducts from '../components/ModalProducts'
 import {getAllCompras,updateCompra} from '../services/Sale'
+import './styles/orders.css'
 import './styles/allOrders.css'
 const AllOrders = () => {
   const[dataCompras ,setDataCompras] = useState({})
