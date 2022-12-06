@@ -48,7 +48,7 @@ useEffect(()=>{
 },[ignored])
 
 return loading?<div className="">cargando</div>:(
-  <>
+  <main>
      <div className="modal">
           {dataShow? <ModalProducts products= {products}><div className='buyer'><h4>Buyer</h4><img src={dataBuyer.img}/> <p>Name: {dataBuyer.name}</p><p>Address: {dataBuyer.city}</p></div><div className='update'><h4>Update State</h4><div><button onClick={(e)=>{update(dataCompras[index]._id,'Ordered')}}>Ordered</button><button  onClick={(e)=>{update(dataCompras[index]._id,'Confirmed')}}>Confirmed</button><button onClick={(e)=>{update(dataCompras[index]._id,'Sent')}}>Sent</button></div></div><button onClick={(e)=>{close()}} >Close</button></ModalProducts> : null}
       </div>
@@ -75,7 +75,7 @@ return loading?<div className="">cargando</div>:(
       </table>
    
     </section>
-  </>
+  </main>
   )
 }
 
