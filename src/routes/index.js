@@ -11,7 +11,9 @@ import ProfilePage from '../pages/ProfilePage'
 import ContactPage from '../pages/ContactPage';
 import CheckoutPage from '../pages/CheckoutPage';
 import ProductoPage from '../pages/ProductoPage';
-
+import OrdersPage from '../pages/OrdersPage';
+import AllOrders from '../pages/AllOrders';
+import { PurchasePage } from '../pages/PurchasePage';
 const RouterComponent = () => {
   const {user: {token,type}} = useContext(UserContext)
   
@@ -31,7 +33,10 @@ const RouterComponent = () => {
       <Route path='/products' element = {<ProductsPage/>} /> 
       <Route path='/contact' element = {<ContactPage/>} /> 
       {token&&<Route path='/checkout' element = {<CheckoutPage/>} /> }
-      <Route path="*" element={<Navigate to="/" replace />} />
+      {token&&<Route path='/purchase' element = {<PurchasePage/>} /> }
+      {type=='customer'&&<Route path='/myorders' element = {<OrdersPage/>} /> }
+      {type=='admin'&&<Route path='/allorders' element = {<AllOrders/>} /> }
+      <Route path="*" element = {<HomePage/>} />
     </Routes>
   )
 }

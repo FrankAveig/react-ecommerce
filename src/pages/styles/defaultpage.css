@@ -4,6 +4,11 @@
 .hero img {
   width: 100%;
 }
+@media (max-width: 1000px) {
+  .hero img {
+    display: none;
+  }
+}
 
 .background {
   width: 90%;
@@ -66,6 +71,11 @@ h1 {
   margin: auto;
   padding-top: 40px;
 }
+@media (max-width: 850px) {
+  .products .text-newProducts {
+    text-align: center;
+  }
+}
 .products .text-newProducts h2 {
   margin: 0;
   text-transform: uppercase;
@@ -88,6 +98,13 @@ h1 {
   margin: auto;
   padding-bottom: 40px;
 }
+@media (max-width: 800px) {
+  .products .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 
 .products::before {
   background: #f6f6f6 none repeat scroll 0 0;
@@ -108,6 +125,42 @@ h1 {
   width: 80%;
   margin: auto;
 }
+@media (max-width: 800px) {
+  .engage img {
+    display: none;
+  }
+}
 .engage .information {
   text-align: justify;
+}
+@media (max-width: 800px) {
+  .engage .information h2 {
+    text-align: center;
+  }
+}
+
+button {
+  cursor: pointer;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  margin: 10px auto;
+  background-color: rgba(63, 63, 216, 0.767);
+  color: white;
+}
+
+button:hover {
+  -webkit-filter: brightness(200%);
+          filter: brightness(200%);
+}
+
+.MuiPaper-root {
+  margin-top: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.MuiPaper-root .MuiSvgIcon-root {
+  margin: 0;
 }

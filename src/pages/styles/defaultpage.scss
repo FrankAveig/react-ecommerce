@@ -3,6 +3,9 @@
     width: 100%;
     img{
         width: 100%;
+        @media (max-width:1000px) {
+            display: none;
+        }
     }
 }
 .background{
@@ -55,6 +58,9 @@ h1{
         width: 90%;
         margin:auto;
         padding-top: 40px;
+        @media (max-width:850px) {
+            text-align: center;
+        }
         h2{
             margin: 0;
             text-transform: uppercase;      
@@ -73,6 +79,9 @@ h1{
         width: 90%;
         margin: auto;
         padding-bottom: 40px;
+        @media (max-width:800px) {
+            justify-content: center;
+        }
     }    
 }
 
@@ -91,7 +100,40 @@ h1{
     display: flex;
     width: 80%;
     margin: auto;
+    img{
+        @media (max-width:800px) {
+            display: none;
+        }
+    }
     .information{
         text-align: justify;
+        h2{
+            @media (max-width:800px) {
+                text-align: center;
+            } 
+        }
+    }
+}
+
+button{
+    cursor: pointer;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    margin: 10px auto;
+    background-color: rgba(63, 63, 216, 0.767);
+    color: white;
+}
+
+button:hover{
+    filter: brightness(200%);
+}
+
+.MuiPaper-root{
+    margin-top: 10px;
+    align-items: center;
+    .MuiSvgIcon-root{
+        margin: 0;
     }
 }

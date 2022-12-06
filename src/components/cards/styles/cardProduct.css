@@ -43,13 +43,9 @@
   display: flex;
 }
 .cardProduct .description svg {
+  display: block !important;
   margin-right: 5px;
   cursor: pointer;
-  display: none;
   margin-top: 10px;
   color: rgba(102, 102, 102, 0.3882352941);
-}
-
-.cardProduct:hover .icons svg {
-  display: block;
 }

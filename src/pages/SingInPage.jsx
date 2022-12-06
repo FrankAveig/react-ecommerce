@@ -24,7 +24,7 @@ const SingInPage = () => {
   }
   return (
         <>
-      <main>
+      <main className='main-login'>
         <section className='imagen'>
           <img src={images.imgLogin} alt="" />
         </section>
@@ -35,8 +35,8 @@ const SingInPage = () => {
             <input required type="text" placeholder='Enter your name' name='name' />
             <label htmlFor="">Surname</label>
             <input required type="text" placeholder='Enter your surname' name='surname' />
-            <label htmlFor="">City</label>
-            <input required type="text" placeholder='Enter your city' name='city' />
+            <label htmlFor="">Address</label>
+            <input required type="text" placeholder='Enter your addres' name='city' />
             <label htmlFor="">Age</label>
             <input required type="number" placeholder='Enter your age' name= 'age' />
             <label htmlFor="">E-mail</label>

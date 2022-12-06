@@ -18,7 +18,22 @@
   display: flex;
 }
 
-nav {
+.navigation-2 ul {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.navigation-2 ul li {
+  list-style: none;
+  margin: auto 5px;
+}
+.navigation-2 a {
+  color: #666666;
+  text-decoration: none;
+}
+
+.navigation-m {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,23 +41,88 @@ nav {
       -ms-flex-pack: center;
           justify-content: center;
 }
-nav ul {
+@media (max-width: 900px) {
+  .navigation-m {
+    background-color: rgba(172, 172, 172, 0.836);
+    position: fixed;
+    top: 0;
+    left: 130vw;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 10;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+.navigation-m ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-nav ul li {
+@media (max-width: 900px) {
+  .navigation-m ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    z-index: 22;
+  }
+}
+.navigation-m ul a {
+  color: #666666;
+}
+@media (max-width: 900px) {
+  .navigation-m ul a {
+    position: inherit;
+    color: white;
+    z-index: 20;
+  }
+}
+.navigation-m ul li {
   list-style: none;
   margin: auto 20px;
   color: #666666;
 }
-nav ul #root > section > nav:nth-child(3) > ul > li:nth-child(2) {
+@media (max-width: 900px) {
+  .navigation-m ul li {
+    position: inherit;
+    color: white;
+    z-index: 20;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+.navigation-m ul #root > section > nav:nth-child(3) > ul > li:nth-child(2) {
   width: 50px;
 }
-nav ul li:hover {
+.navigation-m ul li:hover {
   cursor: pointer;
   color: #303030;
 }
-nav ul a {
+.navigation-m ul a {
   text-decoration: none;
+}
+
+.is-active {
+  left: 0;
+}
+
+.svg-inline--fa {
+  display: none;
+}
+@media (max-width: 800px) {
+  .svg-inline--fa {
+    display: block;
+    position: fixed;
+    left: 50%;
+    margin-top: 30px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 100;
+    background-color: rgba(128, 128, 128, 0.397);
+    padding: 10px;
+    border-radius: 50%;
+  }
 }

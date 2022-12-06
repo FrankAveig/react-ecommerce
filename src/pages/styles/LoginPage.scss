@@ -1,4 +1,4 @@
-main{
+.main-login{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6,9 +6,13 @@ main{
 }
 .imagen{
   margin-right: 40px;
+  @media (max-width:800px) {
+    display: none;
+  }
   img{
     border-radius: 0;
     width: auto;
+  
   }
 
 }
@@ -17,6 +21,9 @@ background: #fafafa;
 border-radius: 20px;
 margin-left: 40px;
 width: 430px;
+@media (max-width:800px) {
+  margin-left: 0;
+}
   form{
     display: flex;
     flex-direction: column;

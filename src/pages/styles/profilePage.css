@@ -15,6 +15,14 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
+.profile button {
+  width: 150px;
+}
+.profile input {
+  height: 25px;
+  border-radius: 8px;
+  border: 1px solid rgba(128, 128, 128, 0.555);
+}
 .profile .card-profile {
   margin: 50px;
   background-color: #fafafa;

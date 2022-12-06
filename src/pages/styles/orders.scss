@@ -1,0 +1,29 @@
+main{
+  min-height: 60vh;
+  display: flex;
+  align-items: flex-start;
+  margin: 0px;
+}
+
+.orders{
+  position: relative;
+  z-index: 1;
+}
+
+
+.modal{
+
+  .productos{
+    position: absolute;
+    z-index: 3000;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    button{
+      margin: 0 auto;
+      padding: 10px;
+      padding-bottom: 26px;
+      background-color: #f12f2f8f!important; 
+    }
+  }
+}

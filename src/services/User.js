@@ -32,3 +32,14 @@ export const getUser= async()=>{
     return{error: e.response.data.detalles}
   }
 }
+
+export const updateUser = async(id,img)=>{
+  try{
+    const {data:{detalles}} = await axios.put(`${path}/${id}`,img, { headers:{
+      authorization: `Bearer ${localStorage.getItem("token")}`,
+    }})
+    return detalles;
+  }catch(e){
+    return{error: e.response.data.detalles}
+  }
+}

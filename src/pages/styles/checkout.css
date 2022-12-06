@@ -1,4 +1,4 @@
-.checkout {
+.checkout, .orders {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,17 +14,17 @@
           align-items: center;
   text-align: center;
 }
-.checkout tr {
+.checkout tr, .orders tr {
   border: 1px solid black;
 }
-.checkout tr img {
+.checkout tr img, .orders tr img {
   width: 80px;
   height: 80px;
   margin: auto;
 }
-.checkout tr th {
+.checkout tr th, .orders tr th {
   width: 200px;
 }
-.checkout tbody tr:nth-child(even) {
+.checkout tbody tr:nth-child(even), .orders tbody tr:nth-child(even) {
   background-color: beige;
 }

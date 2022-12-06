@@ -26,7 +26,7 @@ const LoginPage = () => {
 
   return (
     <>
-      <main>
+      <main className='main-login'>
         <section className='imagen'>
           <img src={images.imgLogin} alt="" />
         </section>

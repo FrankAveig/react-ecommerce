@@ -27,7 +27,6 @@ const getProducts = async()=>{
           <p>Here you can find a wide variety of the latest high quality<br></br>
             smartphones at the best prices
           </p>
-        <a href=''>Shop Now</a>
         </div>
         <img src={images.celularHome} alt="" />
         </section>
@@ -73,7 +72,6 @@ const getProducts = async()=>{
                 )
               })
             }
-            <CardProduct img={images.cel} name='Producto1' price='$830' />
           </div>
         </section>
     </>

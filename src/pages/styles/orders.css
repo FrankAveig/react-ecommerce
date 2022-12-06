@@ -1,0 +1,30 @@
+main {
+  min-height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0px;
+}
+
+.orders {
+  position: relative;
+  z-index: 1;
+}
+
+.modal .productos {
+  position: absolute;
+  z-index: 3000;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+}
+.modal .productos button {
+  margin: 0 auto;
+  padding: 10px;
+  padding-bottom: 26px;
+  background-color: rgba(241, 47, 47, 0.5607843137) !important;
+}

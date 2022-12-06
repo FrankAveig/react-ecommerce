@@ -1,0 +1,30 @@
+.update{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  button{
+    margin: auto 10px!important;
+  }
+  button:nth-child(1){
+    background-color: rgba(247, 110, 60, 0.801)!important;
+  }
+  button:nth-child(2){
+    background-color: #aa95d1!important;
+  }
+  button:nth-child(2):hover{
+    filter: brightness(120%)!important;
+  }
+  button:nth-child(3){
+    background-color: rgba(37, 155, 37, 0.623)!important;
+  }
+}
+.buyer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img{
+    width: 50px;
+    border-radius: 50%;
+  }
+}
